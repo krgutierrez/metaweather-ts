@@ -18,10 +18,6 @@ export abstract class BaseHttpClient<Config = any> implements HttpClient {
     this._config = config;
   }
 
-  get config(): Config {
-    return this._config;
-  }
-
   abstract setBaseURL(url: string): void;
 
   abstract get<Data = any>(url: string): Promise<HttpClientResponse<Data>>;

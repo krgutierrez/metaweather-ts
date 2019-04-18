@@ -1,12 +1,11 @@
 import CommonLocationInfo from "./common-location-info";
+import {WeatherStateAbbreviation} from "./weather-state";
 
 type WindDirectionCompass =
   'N' | 'NbE' | 'BBE' | 'NEbN' | 'NE' | 'NEbE' | 'ENE' | 'EbN' | 'E' | 'EbS' |
   'ESE' | 'SEbE' | 'SE' | 'SEbS' | 'SSE' | 'SbE' | 'S' | 'SbW' | 'SSW' | 'SWbS' |
   'SW' | 'SWbW' | 'WSW' | 'WbS' | 'W' | 'WbN' | 'WNW' | 'NWbW' | 'NW' | 'NWbN' |
   'NbW' | 'N';
-
-type WeatherStateAbbreviation = 'sn' | 'sl' | 'h' | 't' | 'hr' | 'lr' | 's' | 'hc' | 'lc' | 'c';
 
 export interface Source {
   title: string;
