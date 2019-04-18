@@ -2,6 +2,7 @@
   "name": "meta-weather-ts",
   "description": "A meta weather client api using typescript",
   "version": "0.0.1",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc"
