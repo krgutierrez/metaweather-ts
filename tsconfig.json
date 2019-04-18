@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./dist",
+//    "outFile": "meta-weather.js",
+    "declaration": true,
+//    "declarationMap": true,
+    "declarationDir": "./dist/typings",
+    "target": "esnext",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "**/**/*.test.ts"
+  ]
+}
