@@ -1,4 +1,6 @@
 
+type LocationType = 'City' | 'Region' | 'State' | 'Province' | 'Country' | 'Continent';
+
 export interface LatitudeLongitude {
   latitude: number;
   longitude: number;
@@ -6,6 +8,6 @@ export interface LatitudeLongitude {
 
 export default interface CommonLocationInfo extends LatitudeLongitude {
   title: string;
-  locationType: string;
+  locationType: LocationType;
   woeId: number;
 }
