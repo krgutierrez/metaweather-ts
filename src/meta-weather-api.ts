@@ -8,8 +8,6 @@ interface MetaWeatherApiConfig {
   httpClient: BaseHttpClient;
 }
 
-type CallBack<Data> = (err: Error, data?: Data) => void;
-
 export default class MetaWeatherApi {
 
   private _httpClient: BaseHttpClient;
