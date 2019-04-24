@@ -1,11 +1,12 @@
 ### Metaweather API Typescript
 
-A client side interface for using metaweather api.
+A Node JS interface for [metaweather api]([https://www.metaweather.com/api/)
 
 ##### NOTE
-The return of `searchLocations`, `searchLocationByLattLong` and `searchLocationByWoeId` returns is on camel case.
+- The return of `searchLocations`, `searchLocationByLattLong` and `searchLocationByWoeId` returns is on camel case.
 Metaweather return them as snake case.
 See references: https://www.metaweather.com/api/
+- metaweather api resposne header does not have `Access-Control-Allow-Origin: *`. You would need some plugins for browser to allow cors or disable chrome's same origin policy
 
 
 #### Methods:
