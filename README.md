@@ -6,7 +6,7 @@ A Node JS interface for [metaweather api]([https://www.metaweather.com/api/)
 - The return of `searchLocations`, `searchLocationByLattLong` and `searchLocationByWoeId` returns is on camel case.
 Metaweather return them as snake case.
 See references: https://www.metaweather.com/api/
-- metaweather api resposne header does not have `Access-Control-Allow-Origin: *`. You would need some plugins for browser to allow cors or disable chrome's same origin policy
+- metaweather api resposne header does not have `Access-Control-Allow-Origin: *`. If you would use this for client side, you would need use some plugins for browsers to allow cors or disable Chrome's same origin policy (if you are using Chrome)
 
 
 #### Methods:
