@@ -47,20 +47,21 @@ describe('When getIconPath is used', () => {
 
   iconTypeList.forEach(type => {
     describe(`When iconType is ${type}`, () => {
-      const iconPath = getIconUrl(type);
+      let abbr: WeatherStateAbbreviation = 's';
+      const iconPath = getIconUrl(abbr, type);
       let expectedOutPut = null;
       switch (type) {
         case "ico":
-          expectedOutPut = '/static/img/weather/ico/X.ico';
+          expectedOutPut = `/static/img/weather/ico/${abbr}.ico`;
           break;
         case "png-large":
-          expectedOutPut = '/static/img/weather/png/X.png';
+          expectedOutPut = `/static/img/weather/png/${abbr}.png`;
           break;
         case "png-small":
-          expectedOutPut = '/static/img/weather/png/64/X.png';
+          expectedOutPut = `/static/img/weather/png/64/${abbr}.png`;
           break;
         default:
-          expectedOutPut = '/static/img/weather/X.svg';
+          expectedOutPut = `/static/img/weather/${abbr}.svg`;
           break;
       }
       expect(iconPath).toBe(expectedOutPut);

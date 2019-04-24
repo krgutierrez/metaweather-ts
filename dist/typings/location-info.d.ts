@@ -1,4 +1,6 @@
 import CommonLocationInfo from "./common-location-info";
+import { WeatherStateAbbreviation } from "./weather-state";
+declare type WindDirectionCompass = 'N' | 'NbE' | 'BBE' | 'NEbN' | 'NE' | 'NEbE' | 'ENE' | 'EbN' | 'E' | 'EbS' | 'ESE' | 'SEbE' | 'SE' | 'SEbS' | 'SSE' | 'SbE' | 'S' | 'SbW' | 'SSW' | 'SWbS' | 'SW' | 'SWbW' | 'WSW' | 'WbS' | 'W' | 'WbN' | 'WNW' | 'NWbW' | 'NW' | 'NWbN' | 'NbW' | 'N';
 export interface Source {
     title: string;
     url: string;
@@ -9,10 +11,10 @@ export interface ConsolidatedWeather {
     id: number;
     applicableDate: Date;
     weatherStateName: string;
-    weatherStateAbbr: string;
+    weatherStateAbbr: WeatherStateAbbreviation;
     windSpeed: number;
     windDirection: number;
-    windDirectionCompass: number;
+    windDirectionCompass: WindDirectionCompass;
     minTemp: number;
     maxTemp: number;
     theTemp: number;
@@ -29,3 +31,4 @@ export default interface LocationInfo extends CommonLocationInfo {
     sources: Source[];
     consolidatedWeather: ConsolidatedWeather[];
 }
+export {};

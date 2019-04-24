@@ -1,11 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = require("axios");
-const http_client_1 = require("./http-client");
-class AxiosHttpClient extends http_client_1.BaseHttpClient {
+import axios from 'axios';
+import { BaseHttpClient } from "./http-client";
+export class AxiosHttpClient extends BaseHttpClient {
     constructor(config) {
         super(config);
-        this._instance = axios_1.default.create(config);
+        this._instance = axios.create(config);
     }
     setBaseURL(url) {
         this._instance.defaults.baseURL = url;
@@ -27,4 +25,3 @@ class AxiosHttpClient extends http_client_1.BaseHttpClient {
         }
     }
 }
-exports.AxiosHttpClient = AxiosHttpClient;

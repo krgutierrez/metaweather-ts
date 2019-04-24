@@ -3,7 +3,7 @@ import {WeatherState, WeatherStateAbbreviation, WeatherStateName} from "../weath
 export type IconType = 'svg' | 'ico' | 'png-small' | 'png-large';
 
 export const getWeatherStateByAbbr = (abbr: WeatherStateAbbreviation, imageType?: IconType): WeatherState => {
-  const icon = getIconUrl(imageType).replace('X', abbr);
+  const icon = getIconUrl(abbr, imageType);
   let name: WeatherStateName;
   switch (abbr) {
     case "sn":
@@ -35,15 +35,21 @@ export const getWeatherStateByAbbr = (abbr: WeatherStateAbbreviation, imageType?
 };
 
 
-export const getIconUrl = (imageType: IconType): string => {
+export const getIconUrl = (weatherStateAbbreviation: WeatherStateAbbreviation, imageType: IconType): string => {
+  let url: string = null;
   switch (imageType) {
     case "ico":
-      return '/static/img/weather/ico/X.ico';
+        url = '/static/img/weather/ico/X.ico';
+        break;
       case "png-large":
-        return '/static/img/weather/png/X.png';
+        url = '/static/img/weather/png/X.png';
+        break;
       case "png-small":
-        return '/static/img/weather/png/64/X.png';
+        url = '/static/img/weather/png/64/X.png';
+        break;
     default:
-      return '/static/img/weather/X.svg';
+      url = '/static/img/weather/X.svg';
+      break;
   }
+  return url.replace('X', weatherStateAbbreviation);
 };

@@ -1,12 +1,20 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "outDir": "./dist",
+//    "outFile": "dist/index.js",
     "declaration": true,
     "declarationDir": "./dist/typings",
     "target": "esnext",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "lib": [
+      "es2015"
+    ]
   },
+  "files": [
+    "src/index.ts"
+  ],
   "exclude": [
     "**/**/*.test.ts"
   ]
