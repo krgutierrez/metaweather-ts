@@ -2,7 +2,6 @@
   "compilerOptions": {
     "module": "esnext",
     "outDir": "./dist",
-//    "outFile": "dist/index.js",
     "declaration": true,
     "declarationDir": "./dist/typings",
     "target": "esnext",

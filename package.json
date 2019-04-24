@@ -3,6 +3,11 @@
   "description": "A meta weather client api using typescript",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "typings": "dist/typings",
+  "author": {
+    "name": "King Gutierrez",
+    "email": "king.richardf@gmail.com"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc"
