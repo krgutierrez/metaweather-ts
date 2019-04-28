@@ -8,6 +8,19 @@
     "name": "King Gutierrez",
     "email": "king.richardf@gmail.com"
   },
+  "homepage": "https://github.com/krgutierrez/metaweather-ts/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krgutierrez/metaweather-ts"
+  },
+  "keywords": [
+    "metaweather",
+    "metaweather-ts",
+    "api",
+    "ts",
+    "metaweather typescript",
+    "typescript"
+  ],
   "scripts": {
     "test": "jest",
     "build": "rm -rf dist && tsc"
