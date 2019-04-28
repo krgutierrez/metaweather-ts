@@ -1,6 +1,7 @@
 import CommonLocationInfo from "./common-location-info";
 import {WeatherStateAbbreviation} from "./weather-state";
 
+// Please check references https://en.wikipedia.org/wiki/Points_of_the_compass
 type WindDirectionCompass =
   'N' | 'NbE' | 'BBE' | 'NEbN' | 'NE' | 'NEbE' | 'ENE' | 'EbN' | 'E' | 'EbS' |
   'ESE' | 'SEbE' | 'SE' | 'SEbS' | 'SSE' | 'SbE' | 'S' | 'SbW' | 'SSW' | 'SWbS' |

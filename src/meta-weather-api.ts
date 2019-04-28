@@ -21,19 +21,19 @@ export default class MetaWeatherApi {
     this._httpClient.setBaseURL('https://www.metaweather.com/api');
   }
 
-   async searchLocations(text: string): Promise<SimpleLocationInfo[]> {
+   searchLocations = async (text: string): Promise<SimpleLocationInfo[]> => {
      const response = await this._httpClient.get<SimpleLocationInfo[]>(`/location/search/?query=${text}`);
      return jsonResponsetoSimpleLocationInfoList(response.data);
-  }
+  };
 
-  async searchLocationByLattLong(latitude: number, longitude: number): Promise<SimpleLocationInfo[]> {
+  searchLocationByLattLong = async (latitude: number, longitude: number): Promise<SimpleLocationInfo[]>  => {
     const response = await this._httpClient.get(`/location/search/?lattlong=${latitude},${longitude}`);
     return  jsonResponsetoSimpleLocationInfoList(response.data);
-  }
+  };
 
-  async searchLocationByWoeId(woeId: number): Promise<LocationInfo>{
+  searchLocationByWoeId = async (woeId: number): Promise<LocationInfo> => {
     const response = await this._httpClient.get<LocationInfo>(`/location/${woeId}`);
     return jsonResponseToLocationInfo(response.data);
-  }
+  };
 
 }
