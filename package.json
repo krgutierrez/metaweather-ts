@@ -1,13 +1,14 @@
 {
   "name": "metaweather-ts",
   "description": "A meta weather client api using typescript",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "typings": "dist/typings",
   "author": {
     "name": "King Gutierrez",
     "email": "king.richardf@gmail.com"
   },
+  "license": "MIT",
   "homepage": "https://github.com/krgutierrez/metaweather-ts/blob/master/README.md",
   "repository": {
     "type": "git",
