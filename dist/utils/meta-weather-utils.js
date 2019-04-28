@@ -1,5 +1,7 @@
-export const getWeatherStateByAbbr = (abbr, imageType) => {
-    const icon = getIconUrl(abbr, imageType);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getWeatherStateByAbbr = (abbr, imageType) => {
+    const icon = exports.getIconUrl(abbr, imageType);
     let name;
     switch (abbr) {
         case "sn":
@@ -39,7 +41,7 @@ export const getWeatherStateByAbbr = (abbr, imageType) => {
         abbreviation: abbr,
     };
 };
-export const getIconUrl = (weatherStateAbbreviation, imageType) => {
+exports.getIconUrl = (weatherStateAbbreviation, imageType) => {
     let url = null;
     switch (imageType) {
         case "ico":

@@ -75,3 +75,5 @@ const name = getIconUrl('sn', 'png-large'); // /static/img/weather/png/sn.png
 const name = getIconUrl('sn', 'png-small'); // /static/img/weather/png/64/sn.png
 
  ````
+ 
+ Please file an issue if you have encounter one. I will try my best to fix it as soon as possible. :D 

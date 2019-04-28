@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const parseLatLongString = (lattLong) => {
     const [latitude, longitude] = lattLong.split(',');
     return {
@@ -11,7 +13,7 @@ const parseLatLongString = (lattLong) => {
  * @param response - the response from search api of metaweather
  * @return SimpleLocationInfo[]
  */
-export const jsonResponsetoSimpleLocationInfoList = (response = []) => {
+exports.jsonResponsetoSimpleLocationInfoList = (response = []) => {
     return response.map(item => jsonResponseToSimpleLocationInfo(item));
 };
 const jsonResponseToSimpleLocationInfo = (response) => {
@@ -30,7 +32,7 @@ const jsonResponseToSimpleLocationInfo = (response) => {
  * @param response - the response from search location by woeid of metaweather
  * @return LocationInfo
  */
-export const jsonResponseToLocationInfo = (response) => {
+exports.jsonResponseToLocationInfo = (response) => {
     const { distance, ...simpleLocationInfo } = jsonResponseToSimpleLocationInfo(response);
     return {
         ...simpleLocationInfo,
