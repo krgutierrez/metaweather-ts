@@ -1,7 +1,7 @@
 {
   "name": "metaweather-ts",
   "description": "A meta weather client api using typescript",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "typings": "dist/typings",
   "author": {
