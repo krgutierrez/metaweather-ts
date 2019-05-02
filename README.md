@@ -28,7 +28,9 @@ class CustomHttpClient extends BaseHttpClient<CustomHttpClientConfig> {
 
 }
 
-const metaWeatherApi = new MetaWeatherApi();
+const httpClient = new CustomHttpClient({ });
+
+const metaWeatherApi = new MetaWeatherApi(new CustomHttpClient());
 ```` 
 
 #### Methods:
