@@ -8,6 +8,28 @@ Metaweather return them as snake case.
 See references: https://www.metaweather.com/api/
 - metaweather api resposne header does not have `Access-Control-Allow-Origin: *`. If you would use this for client side, you would need use some plugins for browsers to allow cors or disable Chrome's same origin policy (if you are using Chrome)
 
+####Creating New Instance of MetaWeatherApi Class
+````
+import { MetaWeatherApi } from 'metaweather-ts';
+
+const metaWeatherApi = new MetaWeatherApi();
+````
+
+####Replacing Axios for HTTP Requests
+````
+import { MetaWeatherApi } from 'metaweather-ts';
+
+// Generic is the configuration interface of your HTTP client. Default is "any"
+// For Axios, it is AxiosRequestConfig (Current implementation)
+class CustomHttpClient extends BaseHttpClient<CustomHttpClientConfig> {
+
+    // TODO: Implement own implementation for GET request.  
+    // get<Data = any>(url: string): Promise<HttpClientResponse<Data>>;
+
+}
+
+const metaWeatherApi = new MetaWeatherApi();
+```` 
 
 #### Methods:
 **searchLocations**  

@@ -1,7 +1,9 @@
-import MetaWeatherApi from "./meta-weather-api";
-declare const metaWeatherApi: MetaWeatherApi;
+import ClsMetaWeatherApi from "./meta-weather-api";
+declare const metaWeatherApi: ClsMetaWeatherApi;
 export * from "./meta-weather-api";
 export * from "./utils/meta-weather-utils";
+export { BaseHttpClient } from './utils/http-client';
+export declare const MetaWeatherApi: typeof ClsMetaWeatherApi;
 export declare const searchLocations: (text: string) => Promise<import("./simple-location-info").default[]>;
 export declare const searchLocationByLattLong: (latitude: number, longitude: number) => Promise<import("./simple-location-info").default[]>;
 export declare const searchLocationByWoeId: (woeId: number) => Promise<import("./location-info").default>;
