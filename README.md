@@ -1,21 +1,23 @@
+# IMPORTANT
+Metaweather API is not available anymore.
 ### Metaweather API Typescript
 
-A Node JS interface for [metaweather api]([https://www.metaweather.com/api/)
+A Node JS interface for [metaweather api](https://www.metaweather.com/api/)
 
 ##### NOTE
 - The return of `searchLocations`, `searchLocationByLattLong` and `searchLocationByWoeId` returns is on camel case.
 Metaweather return them as snake case.
 See references: https://www.metaweather.com/api/
-- metaweather api resposne header does not have `Access-Control-Allow-Origin: *`. If you would use this for client side, you would need use some plugins for browsers to allow cors or disable Chrome's same origin policy (if you are using Chrome)
+- metaweather api response header does not have `Access-Control-Allow-Origin: *`. If you would use this for client side, you would need use some plugins for browsers to allow cors or disable Chrome's same origin policy (if you are using Chrome)
 
-####Creating New Instance of MetaWeatherApi Class
+#### Creating New Instance of MetaWeatherApi Class
 ````
 import { MetaWeatherApi } from 'metaweather-ts';
 
 const metaWeatherApi = new MetaWeatherApi();
 ````
 
-####Replacing Axios for HTTP Requests
+#### Replacing Axios for HTTP Requests
 ````
 import { MetaWeatherApi } from 'metaweather-ts';
 
